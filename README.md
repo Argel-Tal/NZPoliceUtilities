@@ -19,6 +19,9 @@ library("tinyutils")
 ls("package:tinyutils")
 ```
 
+## _To do_
+Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
+
 # Credits
 ## Author(s): 
 #### Jack MacCormick
