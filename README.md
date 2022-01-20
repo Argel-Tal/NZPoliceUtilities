@@ -10,7 +10,7 @@ This is NOT to be used to store filepaths, actual files or data on NZP processes
 1. Install the required packages for loading non-CRAN packages
 2. Load this package
 ``` R
-install.packages("devtools")` # only have to do this if `devtools` has never been installed before
+install.packages("devtools") # only have to do this if `devtools` has never been installed before
 devtools::install_github("Argel-Tal/NZPoliceUtilities")
 ```
 #### To see the full list of exported functions:
