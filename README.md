@@ -15,8 +15,8 @@ devtools::install_github("Argel-Tal/NZPoliceUtilities")
 ```
 #### To see the full list of exported functions:
 ``` R
-library("tinyutils")
-ls("package:tinyutils")
+library("NZPoliceUtilities")
+ls("package:NZPoliceUtilities")
 ```
 
 ## _To do_
