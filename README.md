@@ -1,8 +1,9 @@
 # NZPoliceUtilities
 ## Helper R package to assist the design of R products for New Zealand Police's (NZP) National Road Policing Centre (NRPC).
 
-Will contain useful functions and non-private data for quick reference and auto-formatting. 
-- _i.e._ loading the approved NZP colours as an R theme, for use in graphing.
+Will contain useful functions and non-private data for quick reference and auto-formatting, _i.e._ 
+- loading the approved NZP colours as an R theme, for use in graphing
+- pulling in and pushing out files from arbitrary paths, read from elsewhere and stored in env instead of as plaintext in codebase
     
 This is NOT to be used to store filepaths, actual files or data on NZP processes/people.
 
