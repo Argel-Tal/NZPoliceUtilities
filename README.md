@@ -19,7 +19,7 @@ library("NZPoliceUtilities")
 ls("package:NZPoliceUtilities")
 ```
 
-## _To do_
+## _WFH to do_
 Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
 
 # Credits
