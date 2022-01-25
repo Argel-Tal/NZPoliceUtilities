@@ -6,6 +6,8 @@ Authors@R:
 Description: Useful functions and non-private data for quick reference and auto-formatting. 
     I.e. loading the approved colours as an R theme, for use in graphing
     This is NOT to be used to store filepaths, actual files or data on NZP processes/people.
+Imports:
+	stringr
 License: use_proprietary_license()
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
