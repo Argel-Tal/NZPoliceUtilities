@@ -12,6 +12,18 @@ filePathedTableRead <- function(filePathIn, fileName, sep1 = ","){
 } # end filePathedTableRead
 
 
+#' Load a CSV encoded dataset from a specified path
+#'
+#' This function loads a CSV file from a specified path, where the file 
+#' is .csv
+#'
+#' @param filePathIn Path to the input file
+#' @param fileName File name and extension
+#' @return dataset
+#' @export
+filePathedCSVRead <- function(filePathIn, fileName){
+return(read.csv(stringr::str_c(filePathIn, "/", fileName)))
+}# end filePathedCSVRead
 
 
 #' Save out a dataset to a specified path
