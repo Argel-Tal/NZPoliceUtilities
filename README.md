@@ -4,6 +4,7 @@
 Will contain useful functions and non-private data for quick reference and auto-formatting, _i.e._ 
 - loading the approved NZP colours as an R theme, for use in graphing
 - pulling in and pushing out files from arbitrary paths, read from elsewhere and stored in env instead of as plaintext in codebase
+    + means that file path and/or file doesnt need to be written inside the code
     
 This is NOT to be used to store filepaths, actual files or data on NZP processes/people.
 
@@ -23,7 +24,7 @@ ls("package:NZPoliceUtilities")
 
 ## _WFH to do_
 - Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
-- compile with the "read csv" function
+- compile with the "return filepath" function
 
 # Credits
 ## Author(s): 
