@@ -1,29 +1,15 @@
 #' Load a dataset from a specified path
 #'
-#' This function loads a file from a specified path, where the file 
-#' type is also specified
+#' This function returns the path to a file from a specified path, where the file 
+#' is also specified
 #'
 #' @param filePathIn Path to the input file
 #' @param fileName File name and extension
-#' @return dataset
+#' @return filepath to data file
 #' @export
-filePathedTableRead <- function(filePathIn, fileName, sep1 = ","){
-  return(read.table(stringr::str_c(filePathIn, "/", fileName), sep = sep1))
-} # end filePathedTableRead
-
-
-#' Load a CSV encoded dataset from a specified path
-#'
-#' This function loads a CSV file from a specified path, where the file 
-#' is .csv
-#'
-#' @param filePathIn Path to the input file
-#' @param fileName File name and extension
-#' @return dataset
-#' @export
-filePathedCSVRead <- function(filePathIn, fileName){
-return(read.csv(stringr::str_c(filePathIn, "/", fileName)))
-}# end filePathedCSVRead
+filePathedToRead <- function(filePathIn, fileName){
+  return(stringr::str_c(filePathIn, "/", fileName))
+} # end filePathedToRead
 
 
 #' Save out a dataset to a specified path
@@ -37,7 +23,7 @@ return(read.csv(stringr::str_c(filePathIn, "/", fileName)))
 #' @export
 filePathedTableWrite <- function(dataSet, filePathOut, fileName, extension = ".txt", 
                                  sep1 = ",", 
-                                 row.names1 = TRUE, 
+                                 row.names1 = FALSE, 
                                  col.names1 = TRUE){
   write.table(dataSet, stringr::str_c(filePathOut,"\\",fileName, extension), 
               sep = sep1, 
