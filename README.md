@@ -23,8 +23,7 @@ ls("package:NZPoliceUtilities")
 
 ## _WFH to do_
 - Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
-- create a "read csv" function
-- create a "write csv" function, although it is undesireable to us CSV going forward
+- compile with the "read csv" function
 
 # Credits
 ## Author(s): 
