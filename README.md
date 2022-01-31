@@ -24,7 +24,6 @@ ls("package:NZPoliceUtilities")
 
 ## _WFH to do_
 - Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
-- compile with the "return filepath" function
 
 # Credits
 ## Author(s): 
