@@ -10,7 +10,7 @@ filePathedTableWrite(
   fileName,
   extension = ".txt",
   sep1 = ",",
-  row.names1 = TRUE,
+  row.names1 = FALSE,
   col.names1 = TRUE
 )
 }
