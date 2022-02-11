@@ -40,7 +40,7 @@ codeSmellsChecker <- function(codePath, lineLengThresh = 100){
       "\n Has", countLongLines, "lines over", lineLengThresh, "characters long;\n\t line no.s:", listLongLines
       ) # end cat
   
-} #end function codeSmellsChecker()
+} # end function codeSmellsChecker()
 
 
 
