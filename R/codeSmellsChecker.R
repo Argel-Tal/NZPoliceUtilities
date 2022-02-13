@@ -1,3 +1,7 @@
+library(stringr)
+library(readr)
+library(tidyverse)
+
 #' Function which scans any code file, and checks it for various code conventions
 #'
 #' @param codePath  : path to file to be checked
@@ -22,6 +26,15 @@ codeSmellsChecker <- function(codePath, lineLengThresh = 100){
   listOperatorNoSpace <- setdiff(stringr::str_extract_all(codeRaw, "[\\+\\-\\*].")[[1]], 
                                  unlist(stringr::str_match_all(stringr::str_extract_all(codeRaw, "[\\+\\-\\*].")[[1]], ". ")))
   
+  countOperatorNoSpace1 <- length(setdiff(stringr::str_extract_all(codeRaw, ".[\\+\\-\\*]")[[1]], 
+                                         unlist(stringr::str_match_all(str_extract_all(codeRaw, ".[\\+\\-\\*]")[[1]], " ."))))
+  listOperatorNoSpace1 <- setdiff(stringr::str_extract_all(codeRaw, ".[\\+\\-\\*]")[[1]], 
+                                 unlist(stringr::str_match_all(stringr::str_extract_all(codeRaw, ".[\\+\\-\\*]")[[1]], " .")))
+  # exclude assignment characters
+  listOperatorNoSpace <- str_remove_all(listOperatorNoSpace, "<-")
+  listOperatorNoSpace1 <- str_remove_all(listOperatorNoSpace1, "<-")
+  countOperatorNoSpace <- countOperatorNoSpace + countOperatorNoSpace1 - length(str_match(codeRaw, "<-"))
+  
   # compute count of and identify where line lengths exceed a user defined (defaulted) threshold
   # set up lines for length counting
   lineStripped <- stringr::str_remove_all(codeText[[1]], "\\r")
@@ -36,11 +49,8 @@ codeSmellsChecker <- function(codePath, lineLengThresh = 100){
   # print out findings
   cat("file: ", str_split(codePath, "/")[[1]][length(str_split(codePath, "/")[[1]])],
       "\n Has", countCommaNoSpace, "non-spaced commas;\n\t", listCommaNoSpace, 
-      "\n Has", countOperatorNoSpace, "non-spaced operator;\n\t", listOperatorNoSpace,
+      "\n Has", countOperatorNoSpace, "non-spaced operator;\n\t", listOperatorNoSpace, listOperatorNoSpace1,
       "\n Has", countLongLines, "lines over", lineLengThresh, "characters long;\n\t line no.s:", listLongLines
-      ) # end cat
+  ) # end cat
   
 } # end function codeSmellsChecker()
-
-
-
