@@ -23,7 +23,7 @@ ls("package:NZPoliceUtilities")
 ```
 
 ## _WFH to do_
-- Convert this to binaries so it can be loaded wihtout Rtools 🙄😠
+- Convert this to binaries so it can be loaded without Rtools 🙄😠
 
 # Credits
 ## Author(s): 
