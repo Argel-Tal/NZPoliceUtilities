@@ -8,7 +8,7 @@
 #' @return filepath to data file
 #' @export
 filePathedToRead <- function(filePathIn, fileName){
-  return(stringr::str_c(filePathIn, "/", fileName))
+  return(file.path(filePathIn, fileName))
 } # end filePathedToRead
 
 
