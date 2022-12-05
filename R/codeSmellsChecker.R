@@ -1,6 +1,6 @@
-library(stringr)
-library(readr)
-library(tidyverse)
+# library(stringr)
+# library(readr)
+# library(tidyverse)
 
 #' Function which scans any code file, and checks it for various code conventions
 #'
